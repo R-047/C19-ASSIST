@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "application.Main",
+            "projectName": "src_d978399c"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Main2",
             "request": "launch",
             "mainClass": "application.Main2",
