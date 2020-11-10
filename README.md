@@ -1,6 +1,7 @@
 # C19-ASSIST
 A simple project using JAVA
 
+***TO RUN THIS PROGRAM, JAVA HAS TO BE INSTALLED IN THE SYSTEM AND HAVE CONFIGURED IN VSCODE, ELSE IT CAN ALSO BE IMPOERTED TO THE DESIRED JAVA IDE AND GET IT CONFIGURED TO RUN THE PROGRAM***
 after cloning the repo 
 open the C19-ASSIST/src folder in vscode
 click on the Main.java file and run the program 
