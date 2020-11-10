@@ -1,0 +1,93 @@
+/* 
+    Document   : styles
+*/
+  
+
+.list-cell {
+
+    -fx-background-color: #43515D;
+    -fx-background-insets: 10 0 10 0;
+    -fx-min-width: 40px; 
+    -fx-min-height: 40px;
+    -fx-cell-size: 70;
+    -fx-padding: 2px;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 5em;
+    
+
+}
+
+.list-cell:hover{
+	-fx-background-color: #7ADBA2;
+    -fx-cell-size: 80;
+	
+}
+
+.list-cell:empty {
+	-fx-padding: 2px;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0px, 2px ;
+}
+
+.list-view .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}
+
+
+.list-cell:selected {
+
+    -fx-background-color: #CF000F;
+    -fx-cell-size: 80;
+
+}
+
+.list-view {
+	-fx-padding: 3px;
+	-fx-background-color: darked;
+	
+}
+
+.button:hover {
+    -fx-background-color: #7ADBA2;
+}
+
+.button {
+	-fx-background-color: #43515D;
+	-fx-text-fill: #ffffff;
+	 -fx-font-size: 16pt;           
+    -fx-padding: 20px;
+    -fx-graphic-text-gap: 25px;
+    /*-fx-alignment: LEFT;*/
+}
+/* */
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #66C1BE;
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-padding: 2px;
+}
+
+.radio-button:selected .radio .dot{
+    -fx-background-color: #66C1BE;
+    -fx-background-insets: 0;
+}
+
+
+.radio-button {
+	
+    -fx-text-fill: #ffffff;
+}
+
+#ROOTNODE {
+-fx-background-radius: 30;
+-fx-border-radius: 30;
+-fx-border-width:2;
+-fx-background-color: #29363F;
+-fx-border-color: #66C1BE;
+}
+	
+
+
+
+
