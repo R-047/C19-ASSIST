@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import backend.CSVreader;
+import backend.CreateFolFil;
 import backend.report;
 import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
@@ -38,8 +39,12 @@ public class LoginScreen extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
+
+
+		CreateFolFil.createFolder();
+		CreateFolFil.createFile();
 		CSVreader csv = new CSVreader();
-		csv.readPatientsfile("/home/rohith/Desktop/C19-ASSIST/PatientDetails.csv");
+		csv.readPatientsfile("/home/rohith/C19-ASSIST/PatientDetails.csv");
 
 		report re = new report();
 		re.Summary();
@@ -144,7 +149,7 @@ public class LoginScreen extends Application {
 		loginButton.setOnAction(e -> {
 			String username = nameTextbox.getText().trim();
 			String passwordtext = passwordTextbox.getText().trim();
-			boolean check = CSVreader.readIDfile("/home/rohith/Desktop/C19-ASSIST/userIDs.txt", username, passwordtext);
+			boolean check = CSVreader.readIDfile("/home/rohith/C19-ASSIST/userIDs.txt", username, passwordtext);
 			if (check) {
 				primaryStage.close();
 				new MainScreen();

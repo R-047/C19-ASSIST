@@ -53,7 +53,7 @@ public class MainScreen {
 		closeButton.setLayoutX(1025);
 		closeButton.setLayoutY(5);
 		closeButton.setOnAction(e -> {
-			new CSVwriter("/home/rohith/Desktop/C19-ASSIST/PatientDetails.csv").writeToPatientsFile();
+			new CSVwriter("/home/rohith/C19-ASSIST/PatientDetails.csv").writeToPatientsFile();
 			System.exit(0);
 		});
 

@@ -329,7 +329,7 @@ public class EnterScreen {
 	
 	int  autogenpid(){
         FileIO fo = new FileIO();
-        String filename = "/home/rohith/Desktop/C19-ASSIST/AutoGenPid.txt";
+        String filename = "/home/rohith/C19-ASSIST/AutoGenPid.txt";
         int numFromFile = fo.readBits(filename);
         int pid = numFromFile;
         numFromFile++;
