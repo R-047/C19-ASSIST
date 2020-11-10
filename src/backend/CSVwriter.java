@@ -62,7 +62,7 @@ public class CSVwriter{
 
     
 
-    static void writer(String line){
+    public void writer(String line){
         try{
             bw.write(line);
             bw.newLine();

@@ -13,8 +13,7 @@ public class CreateFolFil {
    public static  void createFile() throws Exception{
         File file1 =  new File("/home/rohith/C19-ASSIST/AutoGenPid.txt");
         if(file1.createNewFile()){
-            new CSVwriter("/home/rohith/C19-ASSIST/AutoGenPid.txt");
-			CSVwriter.writer("100000");
+            new CSVwriter("/home/rohith/C19-ASSIST/AutoGenPid.txt").writer("100000");
         }
         File file2 = new File("/home/rohith/C19-ASSIST/LocationsDB.txt");
         System.out.println(file2.createNewFile());
