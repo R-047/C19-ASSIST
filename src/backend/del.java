@@ -11,6 +11,9 @@ public class del{
 		 		}
 		 	
 		 	if(pid == pointer.PID){
+				 if(pointer == linkedList.patientListCurrNode){
+					linkedList.patientListCurrNode = prevnode;
+				 }
 		 		prevnode.link = pointer.link;
 		 		pointer.link = null;
 		 		break;
