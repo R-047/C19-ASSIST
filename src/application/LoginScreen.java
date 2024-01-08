@@ -32,6 +32,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import utils.Utils;
 
 public class LoginScreen extends Application {
 	static Group root = new Group();
@@ -44,7 +45,7 @@ public class LoginScreen extends Application {
 		CreateFolFil.createFolder();
 		CreateFolFil.createFile();
 		CSVreader csv = new CSVreader();
-		csv.readPatientsfile("/home/rohith/C19-ASSIST/PatientDetails.csv");
+		csv.readPatientsfile(Utils.getDataDir()+"PatientDetails.csv");
 
 		report re = new report();
 		re.Summary();
@@ -149,7 +150,7 @@ public class LoginScreen extends Application {
 		loginButton.setOnAction(e -> {
 			String username = nameTextbox.getText().trim();
 			String passwordtext = passwordTextbox.getText().trim();
-			boolean check = CSVreader.readIDfile("/home/rohith/C19-ASSIST/userIDs.txt", username, passwordtext);
+			boolean check = CSVreader.readIDfile(Utils.getDataDir()+"userIDs.txt", username, passwordtext);
 			if (check) {
 				primaryStage.close();
 				new MainScreen();

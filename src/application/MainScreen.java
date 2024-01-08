@@ -28,6 +28,7 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import utils.Utils;
 
 public class MainScreen {
 
@@ -53,7 +54,7 @@ public class MainScreen {
 		closeButton.setLayoutX(1025);
 		closeButton.setLayoutY(5);
 		closeButton.setOnAction(e -> {
-			new CSVwriter("/home/rohith/C19-ASSIST/PatientDetails.csv").writeToPatientsFile();
+			new CSVwriter(Utils.getDataDir()+"PatientDetails.csv").writeToPatientsFile();
 			System.exit(0);
 		});
 

@@ -18,6 +18,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import utils.Utils;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -329,7 +330,7 @@ public class EnterScreen {
 	
 	int  autogenpid(){
         FileIO fo = new FileIO();
-        String filename = "/home/rohith/C19-ASSIST/AutoGenPid.txt";
+        String filename = Utils.getDataDir()+"AutoGenPid.txt";
         int numFromFile = fo.readBits(filename);
         int pid = numFromFile;
         numFromFile++;
