@@ -2,6 +2,8 @@ package backend;
 
 import java.io.*;
 
+import utils.Utils;
+
 public class report {
 
    static  boolean check(String location, String filename){
@@ -22,7 +24,7 @@ public class report {
 
 
     public static void autoFormulatedLocationDB(String location){
-        String filename = "/home/rohith/C19-ASSIST/LocationsDB.txt";//createFiles.LOCATIONDBfilename;
+        String filename = Utils.getDataDir()+"LocationsDB.txt";//createFiles.LOCATIONDBfilename;
         if(!check(location, filename)){
             CSVwriter.awriter(location, filename);
         }
@@ -39,7 +41,7 @@ public class report {
         String in_city;
         int in_numCases = 0, in_numDeaths = 0, in_activecases = 0;
         double in_recovRate, totalRecCase = 0;
-        String filename = "/home/rohith/C19-ASSIST/LocationsDB.txt", line;
+        String filename = Utils.getDataDir()+"LocationsDB.txt", line;
         try {
             FileInputStream fin = new FileInputStream(filename);
             InputStreamReader in = new InputStreamReader(fin);
